@@ -16,8 +16,9 @@ const Navbar = () => {
         justifyContent: "space-between",
       }}
     >
-
-      
+      <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+        <img/>
+      </Link>
     </Stack>
   );
 };
