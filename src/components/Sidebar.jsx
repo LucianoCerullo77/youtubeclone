@@ -11,7 +11,12 @@ const Sidebar = () => {
         flexDirection: { md: "column" },
       }}
     >
-      SideBar
+      {categories.map((category) => (
+        <button>
+          <span>{category.icon}</span>
+          <span>{category.name}</span>
+        </button>
+      ))}
     </Stack>
   );
 };
