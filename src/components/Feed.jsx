@@ -21,6 +21,11 @@ const Feed = () => {
           Copyright 2023 YouWatch
         </Typography>
       </Box>
+      <Box>
+        <Typography>
+          <span style={{ color: "#fc1503" }}>New Videos</span>
+        </Typography>
+      </Box>
     </Stack>
   );
 };
