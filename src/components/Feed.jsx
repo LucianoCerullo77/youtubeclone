@@ -4,7 +4,7 @@ import { Sidebar, Videos } from "./";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 
 const Feed = () => {
-  const [selectedCategory, setselectedCategory] = useState("New");
+  const [selectedCategory, setSelectedCategory] = useState("New");
 
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`);
@@ -19,7 +19,10 @@ const Feed = () => {
           px: { sx: 0, md: 2 },
         }}
       >
-        <Sidebar />
+        <Sidebar
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+         />
         <Typography
           className="copyright"
           variant="body2"
