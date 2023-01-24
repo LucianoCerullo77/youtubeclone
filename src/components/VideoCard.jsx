@@ -10,9 +10,13 @@ import {
   demoChannelUrl,
 } from "../utils/constants";
 
-
-
-const VideoCard = () => {
+const VideoCard = ({
+  video: {
+    id: { videoId },
+    snippet,
+  },
+}) => {
+  console.log(videoId, snippet);
   return <div>VideoCard</div>;
 };
 
