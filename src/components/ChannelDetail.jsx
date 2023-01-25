@@ -28,11 +28,13 @@ const ChannelDetail = () => {
       <Box>
         <div
           style={{
-            background: "linear-gradient(90deg, rgba(0,43,255,1) 0%, rgba(253,29,191,1) 50%, rgba(255,0,0,1) 100%)",
+            background:
+            "linear-gradient(90deg, rgba(0,43,255,1) 0%, rgba(253,29,191,1) 50%, rgba(255,0,0,1) 100%)",
             zIndex: 10,
-            height:'300px'
+            height: "300px",
           }}
         />
+        <ChannelCard channelDetail={channelDetail}/>
       </Box>
     </Box>
   );
