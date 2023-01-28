@@ -18,6 +18,13 @@ const VideoDetail = () => {
     );
   }, [id]);
 
+  if (!videoDetail?.snippet) return "Loading...";
+
+  const {
+    snippet: { title, channelId, channelTitle },
+    statistics: { viewCount, likeCount },
+  } = videoDetail;
+
   return (
     <Box minHeight="95vh">
       <Stack direction={{ xs: "column", md: "row" }}>
@@ -29,8 +36,21 @@ const VideoDetail = () => {
               controls
             />
             <Typography color="#fff" variant="h5" fontWeight="bold" p={2}>
-              {videoDetail?.snippet?.title}
+              {title}
             </Typography>
+            <Stack
+              direction="row"
+              justifyContent="space-between"
+              sx={{
+                color: "#fff",
+              }}
+              py={1}
+              px={2}
+            >
+              <Link to={`/channel/${channelId}`}>
+                <Typography color="#fff">{channelTitle}</Typography>
+              </Link>
+            </Stack>
           </Box>
         </Box>
       </Stack>
